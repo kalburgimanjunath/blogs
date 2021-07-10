@@ -4,6 +4,14 @@ title: Photos
 date: 2021-03-18
 ---
 # Photos
+const url = 'http://iknow.com/this/does/not/work/either/file.js';
+console.log('preparing to load...')
+        let node = document.createElement('script');
+        node.src = url;
+        node.type = 'text/javascript';
+        node.async = true;
+        node.charset = 'utf-8';
+        document.getElementsByTagName('head')[0].appendChild(node);        
 <Image
   src="/images/photo2.jpg"
   alt="Photo"
