@@ -22,7 +22,19 @@ export default function Nextra({ Component, pageProps }) {
           crossOrigin="anonymous"
         />
       </Head>
-      <Component {...pageProps} />     
+      <Component {...pageProps} />    
+      import Script from "../hooks/Script";
+
+      <Fragment>
+        {/* Google Map */}
+        <div ref={el => this.el = el} className="gmap"></div>
+
+        {/* Old html script */}
+        {/*<script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>*/}
+
+        {/* new custom Script component */}
+        <Script src='http://maps.google.com/maps/api/js' async={false} />
+      </Fragment>
     </>
   )
 }
