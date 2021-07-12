@@ -37,7 +37,7 @@ export default function Nextra({ Component, pageProps }) {
         <div class='embedsocial-album' data-ref="6c9990cf51a1d53f22a93d4527d3f8e932327afb">
           <a class="feed-powered-by-es" href="https://embedsocial.com/facebook-albums/" target="_blank" title="Powered by EmbedSocial">Powered by EmbedSocial<span>→</span></a>
             </div>
-        <Script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/embedscript/ei.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialScript"));</Script>
+        <Script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/embedscript/ei.js"; d.getElementsByTagName("head")[0].appendChild(js)}(document, "script", "EmbedSocialScript"));</Script>
       </Fragment>
     </>
   )
