@@ -42,7 +42,6 @@ export default function Nextra({ Component, pageProps }) {
         />
       </Head>
       <Component {...pageProps} />  
-      <!--<div dangerouslySetInnerHTML={{ __html: this.htmlDecode(scriptCode) }} />-->
     </>
   )
 }
