@@ -1,8 +1,8 @@
 import 'nextra-theme-blog/style.css'
 import Head from 'next/head'
-
-import '../styles/main.css'
 import {Helmet} from "react-helmet";
+import '../styles/main.css'
+
 
 export default function Nextra({ Component, pageProps }) {
   return (
@@ -22,16 +22,7 @@ export default function Nextra({ Component, pageProps }) {
           crossOrigin="anonymous"
         />
       </Head>
-      <Component {...pageProps} />
-      <Helmet>
-                <div>
-  <div class='embedsocial-album' data-ref="6c9990cf51a1d53f22a93d4527d3f8e932327afb">
-    <a class="feed-powered-by-es" href="https://embedsocial.com/facebook-albums/" target="_blank" title="Powered by EmbedSocial">
-      </a>
-  </div>
-  <script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/embedscript/ei.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialScript"));</script>
-  </div>
-            </Helmet>
+      <Component {...pageProps} />     
     </>
   )
 }
