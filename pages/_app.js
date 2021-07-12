@@ -41,10 +41,7 @@ export default function Nextra({ Component, pageProps }) {
           crossOrigin="anonymous"
         />
       </Head>
-      <Component {...pageProps} />    
-    {*<div dangerouslySetInnerHTML={{ __html: htmlDecode(scriptCode) }} /></div>*}
-
-      
+      <Component {...pageProps} />      
     </>
   )
 }
