@@ -2,6 +2,7 @@ import 'nextra-theme-blog/style.css'
 import Head from 'next/head'
 import {Helmet} from "react-helmet";
 import '../styles/main.css'
+import Script from "../hooks/Script";
 
 
 export default function Nextra({ Component, pageProps }) {
@@ -23,7 +24,7 @@ export default function Nextra({ Component, pageProps }) {
         />
       </Head>
       <Component {...pageProps} />    
-      import Script from "../hooks/Script";
+      
 
       <Fragment>
         {/* Google Map */}
