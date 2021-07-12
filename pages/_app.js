@@ -2,10 +2,28 @@ import 'nextra-theme-blog/style.css'
 import Head from 'next/head'
 import {Helmet} from "react-helmet";
 import '../styles/main.css'
-import Script from "../hooks/Script";
+import { useEffect } from 'react'
 
+export function htmlDecode(html) {
+    return html.replace(/&([a-z]+);/ig, (match, entity) => {
+      const entities = { amp: '&', apos: '\'', gt: '>', lt: '<', nbsp: '\xa0', quot: '"' };
+      entity = entity.toLowerCase();
+      if (entities.hasOwnProperty(entity)) {
+        return entities[entity];
+      }
+      return match;
+    });
+  }
 
 export default function Nextra({ Component, pageProps }) {
+  const scriptCode = `<script type="text/javascript">
+          {(function() {
+          window.hello={
+            FIRST_NAME: 'firstName',
+            LAST_NAME: 'lastName',
+          };
+          })()}
+          </script>`
   return (
     <>
       <Head>
@@ -24,21 +42,9 @@ export default function Nextra({ Component, pageProps }) {
         />
       </Head>
       <Component {...pageProps} />    
+      <div dangerouslySetInnerHTML={{ __html: htmlDecode(scriptCode) }} /></div>
+
       
-
-      <Fragment>
-        {/* Google Map */}
-        <div ref={el => this.el = el} className="gmap"></div>
-
-        {/* Old html script */}
-        {/*<script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>*/}
-
-        {/* new custom Script component */}
-        <div class='embedsocial-album' data-ref="6c9990cf51a1d53f22a93d4527d3f8e932327afb">
-          <a class="feed-powered-by-es" href="https://embedsocial.com/facebook-albums/" target="_blank" title="Powered by EmbedSocial">Powered by EmbedSocial<span>→</span></a>
-            </div>
-        <Script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/embedscript/ei.js"; d.getElementsByTagName("head")[0].appendChild(js)}(document, "script", "EmbedSocialScript"));</Script>
-      </Fragment>
     </>
   )
 }
