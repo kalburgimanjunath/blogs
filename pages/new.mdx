@@ -5,33 +5,11 @@ date: 2021-03-19
 ---
 
 # Contact me
-```
-<form action="https://formspree.io/manjunathkalburgi@gmail.com" method="POST">
-    <div className="input-group">
-    <label htmlFor="email">E-mail Address</label>
-    <input
-        type="email"
-        name="email"
-        id="email"
-        value={this.state.values.email}
-        onChange={this.handleInputChange}
-        title="Email"
-        required
-    />
-    </div>
-    <div className="input-group">
-    <label htmlFor="message">Message</label>
-    <textarea
-        name="message"
-        id="message"
-        onChange={this.handleInputChange}
-        title="password"
-        required
-    >{this.state.values.message}</textarea>
-    </div>
-    <button type="submit">Send</button>
+<form action="https://formspree.io/f/{form_id}" method="post">
+  <label for="email">Your Email</label>
+  <input name="Email" id="email" type="email">
+  <button type="submit">Submit</button>
 </form>
-```
 <div>
   Twitter [@manjumk](https://twitter.com/manjumk)
   <br />
