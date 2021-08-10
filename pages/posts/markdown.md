@@ -3,6 +3,7 @@ title: Declaring Components in an Angular Module
 date: 2021/3/19
 description: Declaring Components in an Angular Module
 tag: web development
+layout:html
 author: You
 ---
 
